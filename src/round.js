@@ -51,13 +51,11 @@ function endRound(round) {
       for (var i = 0; i < round.incorrectGuesses.length; i++)
         {
           newDeck.push(prototypeData.find(({id}) => id === round.incorrectGuesses[i]));
-
         }
         round.deck = newDeck;
         round.currentCard = round.deck[0];
         round.turns = 0;
         round.incorrectGuesses = [];
-
         console.log("Alright, let's review the ones you got wrong!"); 
     }
 
