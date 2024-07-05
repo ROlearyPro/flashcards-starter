@@ -13,6 +13,7 @@ function printMessage(deck) {
 function printQuestion(round) {
   util.main(round);
 }
+const startTime = Date.now();
 
 function start(){
   const deck = createDeck(20);
@@ -23,9 +24,8 @@ function start(){
 
   printQuestion(round);
 
-
 }
 
 start();
 
-module.exports = { printMessage, printQuestion };
+module.exports = { printMessage, printQuestion, start, startTime };
